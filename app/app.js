@@ -15,7 +15,6 @@ async function searchPokemon(searchTerm) {
 // Info for evolution chain
 async function searchPokemonTwo(searchTerm) {
     const apiGame = `https://pokeapi.co/api/v2/pokemon-species/${searchTerm}`;
-
     try {
 			const response = await fetch(apiGame);
 			const dataTwo = await response.json();

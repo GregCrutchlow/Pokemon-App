@@ -3,10 +3,16 @@
 #search-results {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     height: 500px;
     width: 350px;
+    background: rgba(#880088, 0.075);
+    border-radius: 25px;
+    z-index: 5;
     .pokemon-img {
         width: 100%;
-        height: 200px;
+        z-index: 1;
     }
 }
