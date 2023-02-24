@@ -11,7 +11,7 @@ async function searchPokemon(searchTerm) {
         console.error(error);
     }
 }
-
+const butt = document.querySelectorAll
 // Info for evolution chain
 async function searchPokemonTwo(searchTerm) {
     const apiGame = `https://pokeapi.co/api/v2/pokemon-species/${searchTerm}`;
