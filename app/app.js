@@ -36,10 +36,31 @@ searchForm.addEventListener('submit', async (event) => {
 		const pokemonName = data.name.charAt(0).toUpperCase() + data.name.slice(1);
 		const pokemonImage = data.sprites.front_default;
 		const pokemonType = data.types[0].type.name;
+		const pokemonHP = data.stats[0].base_stat;
+		const pokemonAtt = data.stats[1].base_stat;
+		const pokemonDef = data.stats[2].base_stat;
+		const pokemonSA = data.stats[3].base_stat;
+		const pokemonSD = data.stats[4].base_stat;
+		const pokemonSpeed = data.stats[5].base_stat;
 		const pokemonHtml = `
-        <h2>${pokemonName}</h2>
+		<div class="name-info">
+			<h2>${pokemonName}</h2>
+			<p>Type: ${pokemonType}</p>
+		</div>
         <img src="${pokemonImage}" class="pokemon-img" alt="${pokemonName}" />
-        <p>Type: ${pokemonType}</p>
+		<div class="stats-display">
+			<div class="stat1">
+				<p>HP: ${pokemonHP}</p>
+				<p>Attack: ${pokemonAtt}</p>
+				<p>Defense: ${pokemonDef}</p>
+			</div>
+			<div class="stat2">
+				<p>Special-Attack: ${pokemonSA}</p>
+				<p>Special-Defense: ${pokemonSD}</p>
+				<p>Speed: ${pokemonSpeed}</p>
+			</div>
+		</div>
+
         `;
 		searchResults.innerHTML = pokemonHtml;
 		searchInput.value = '';

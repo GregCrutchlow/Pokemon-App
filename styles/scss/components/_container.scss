@@ -5,14 +5,44 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     margin: 0 auto;
     height: 500px;
     width: 350px;
     background: rgba(#880088, 0.075);
     border-radius: 25px;
     z-index: 5;
+    .name-info{
+        position: absolute;
+        top: 52%;
+        h2 {
+            margin: 0;
+        }
+        p {
+            margin: 2px;
+        }
+    }
     .pokemon-img {
-        width: 100%;
-        z-index: 1;
+        position: absolute;
+        top: 10px;
+        width: 70%;
+        height: auto;
+        z-index: 6;
+    }
+    .stats-display {
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        width: 80%;
+        gap: 20px;
+        .stat1 {
+            width: 40%;
+        }
+        .stat2 {
+            width: 60%;
+        }
+        p {
+            padding: 5px 0;
+        }
     }
 }
