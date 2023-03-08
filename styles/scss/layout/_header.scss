@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 
-header {
+header .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;

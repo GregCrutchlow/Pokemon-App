@@ -235,6 +235,21 @@ html {
   overflow: hidden;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.pokemon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #search-results {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,7 +329,7 @@ html {
 }
 #search-form input {
   padding: 10px;
-  width: 25%;
+  width: 35%;
   border-radius: 10px;
   border: 0;
   background-color: lightgrey;
@@ -348,13 +363,13 @@ html {
 #search-form button {
   margin: 10px;
   padding: 10px;
-  width: 15%;
+  width: 25%;
   border: 0;
   border-radius: 10px;
   background-color: lightgrey;
 }
 
-header {
+header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -26,6 +26,8 @@ async function searchPokemonTwo(searchTerm) {
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
+const previousEvo = document.getElementById('previous-evolution');
+const nextEvo = document.getElementById('next-evolution');
 
 searchForm.addEventListener('submit', async (event) => {
 	event.preventDefault();
@@ -42,6 +44,17 @@ searchForm.addEventListener('submit', async (event) => {
 		const pokemonSA = data.stats[3].base_stat;
 		const pokemonSD = data.stats[4].base_stat;
 		const pokemonSpeed = data.stats[5].base_stat;
+		const evolutionChainUrl = dataTwo.evolution_chain.url;
+
+		const evolutionChainResponse = await fetch(evolutionChainUrl);
+		const evolutionChainData = await evolutionChainResponse.json();
+		
+		const evolutionPrevious = `
+		<h3>Previous Evolution: ${evolutionChainData.chain.species.name}</h3>`;
+
+		const evolutionNext = `
+		<h3>Next Evolution: ${evolutionChainData.chain.evolves_to[0].evolves_to[0].species.name}</h3>`;
+
 		const pokemonHtml = `
 		<div class="name-info">
 			<h2>${pokemonName}</h2>
@@ -60,9 +73,11 @@ searchForm.addEventListener('submit', async (event) => {
 				<p>Speed: ${pokemonSpeed}</p>
 			</div>
 		</div>
-
         `;
 		searchResults.innerHTML = pokemonHtml;
+		previousEvo.innerHTML = evolutionPrevious;
+		nextEvo.innerHTML = evolutionNext;
+
 		searchInput.value = '';
 		console.log(data);
 		console.log(dataTwo);

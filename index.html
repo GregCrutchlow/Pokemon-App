@@ -10,20 +10,32 @@
 </head>
 <body>
     <header>
-        <h1>Bidoof-A-Dex</h1>
-        <h2>The Pokedex for Pokémon in the Main Games</h2>
+        <div class="wrapper">
+            <h1>Bidoof-A-Dex</h1>
+            <h2>The Pokedex for Pokémon in the Main Games</h2>
+        </div>
     </header>
     <main>
-        <section class="search-pokemon">
-            <form id="search-form">
-                <label for="search-input">Search for a Pokémon:</label>
-                <input type="text" id="search-input" name="search" placeholder="Pokémon Name or Pokémon Number"/>
-                <button type="submit">Search</button>
-            </form>
-            <div id="search-results">
-                
-            </div>
-        </section>
+        <div class="wrapper">
+            <section class="search-pokemon">
+                <form id="search-form">
+                    <label for="search-input">Search for a Pokémon:</label>
+                    <input type="text" id="search-input" name="search" placeholder="Pokémon Name or Pokémon Number"/>
+                    <button type="submit">Search</button>
+                </form>
+                <div class="pokemon-container">
+                    <div id="previous-evolution">
+        
+                    </div>
+                    <div id="search-results">
+                        
+                    </div>
+                    <div id="next-evolution">
+        
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
 
