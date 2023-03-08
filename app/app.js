@@ -70,3 +70,13 @@ searchForm.addEventListener('submit', async (event) => {
 		console.error(error);
 	}
 });
+
+// TODO: Create a quiz to determine what starter pokemon you should start with based on several questions
+	// TODO 1.Based on answers, multiply the final total from all questions (they have a numerical value to them) to determine what starter from which game to select
+	// TODO 2. When Starter is determined, have the final results clickable to take them to a detailed page of the pokemon and the "main" portion of the app. 
+		// TODO Store the result in the local data if possible, have a reset button to remove the local data cache for the starter pokemon
+		
+// TODO: "Main" page 
+	// TODO 1. Searchable bar that can search for Pokemon based on name or number (COMPLETE)
+	// TODO 2. Put buttons for previous pokemon in the list and the next pokemon in the list
+	// TODO 3. "Compare" button to compare two pokemon (NOT SURE OF)
